@@ -55,9 +55,9 @@ main>header p{font-size:12px}.collection-updated{font-size:11px!important;overfl
 .table-wrap{overflow:visible;max-height:none;background:transparent;border:0;border-radius:0}
 #collection,#collection thead,#collection tbody{display:block;width:100%}
 #collection thead{top:var(--search-height,78px);background:#f6f4ed;box-shadow:0 6px 8px -8px #202b2755}
-#collection thead tr{display:flex;flex-wrap:wrap;gap:4px;padding:0 0 8px;background:transparent}
-#collection th{display:block;padding:0;border:0;background:transparent}
-#collection th button{padding:6px 10px;border:1px solid var(--line);border-radius:16px;background:#eaf0e6;font-size:12px;min-height:32px}
+#collection thead tr{display:flex;flex-wrap:nowrap;gap:2px;padding:0 0 8px;background:transparent}
+#collection th{display:block;flex:1 1 auto;min-width:0;padding:0;border:0;background:transparent}
+#collection th button{width:100%;padding:6px 3px;border:1px solid var(--line);border-radius:12px;background:#eaf0e6;font-size:clamp(9px,2.6vw,12px);line-height:1.2;min-height:32px;text-align:center;white-space:nowrap}
 #collection tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px;padding:10px 12px;margin-bottom:8px;border:1px solid var(--line);border-radius:10px;background:#fff}
 #collection tbody tr.pending-local{border-left:4px solid #b77900;background:#fff7dc}
 #collection td:nth-child(n){min-width:0;padding:0;border:0;background:transparent;overflow-wrap:anywhere}
