@@ -49,7 +49,7 @@ footer{margin-top:18px;color:var(--muted);font-size:12px}.empty{padding:30px;tex
 <header><div class="record" aria-hidden="true"></div><div>
 <div class="eyebrow">Vinyle / Collection personnelle</div>
 <p>2 325 exemplaires · 1145 artistes</p>
-<p class="collection-updated">Dernière mise à jour de la base (Discogs) : <time datetime="2026-11-02">02/11/2026</time></p>
+<p class="collection-updated">Mise jour (Discogs) : <time datetime="2026-11-02">02/11/2026</time> · build: <time id="build-date" datetime="2026-11-03T09:57:12+00:00">03/11/2026 09:57:12 UTC</time></p>
 </div></header>
 <div class="toolbar collection-search"><div class="search"><label for="search">Rechercher dans la collection</label>
 <div class="search-line"><input type="search" id="search" placeholder="Artiste, titre, année, label…" autocomplete="off" aria-controls="collection">
@@ -2461,6 +2461,13 @@ et restaurer l'index et les scripts photo avant de reactiver installPhotoSearch.
 })();
 </script>
 <script>
+const buildDate = document.querySelector('#build-date');
+if (buildDate) {
+  buildDate.textContent = new Intl.DateTimeFormat('fr-FR', {
+    timeZone: 'Europe/Paris', day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit'
+  }).format(new Date(buildDate.dateTime)) + ' (Paris)';
+}
 const input = document.querySelector('#search');
 const tbody = document.querySelector('tbody');
 const rows = [...tbody.rows];
