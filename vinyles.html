@@ -58,7 +58,7 @@ main>header p{font-size:12px}.collection-updated{font-size:11px!important;overfl
 #collection thead tr{display:flex;flex-wrap:nowrap;gap:2px;padding:0 0 8px;background:transparent}
 #collection th{display:block;flex:1 1 auto;min-width:0;padding:0;border:0;background:transparent}
 #collection th button{width:100%;padding:6px 3px;border:1px solid var(--line);border-radius:12px;background:#eaf0e6;font-size:clamp(9px,2.6vw,12px);line-height:1.2;min-height:32px;text-align:center;white-space:nowrap}
-#collection tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px;padding:10px 12px;margin-bottom:8px;border:1px solid var(--line);border-radius:10px;background:#fff}
+#collection tbody tr{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.15fr) minmax(0,1.45fr);gap:2px 4px;padding:10px 12px;margin-bottom:8px;border:1px solid var(--line);border-radius:10px;background:#fff}
 #collection tbody tr.pending-local{border-left:4px solid #b77900;background:#fff7dc}
 #collection td:nth-child(n){min-width:0;padding:0;border:0;background:transparent;overflow-wrap:anywhere}
 #collection td:first-child{grid-column:1/-1;display:flex;align-items:center;font-size:14px;line-height:1.3}
@@ -69,7 +69,8 @@ main>header p{font-size:12px}.collection-updated{font-size:11px!important;overfl
 #collection td:nth-child(3){grid-column:1;grid-row:3}
 #collection td:nth-child(4){grid-column:2;grid-row:3}
 #collection td:nth-child(6){grid-column:3;grid-row:3;white-space:nowrap}
-#collection td:nth-child(3)::before,#collection td:nth-child(4)::before,#collection td:nth-child(6)::before{display:block}
+#collection td:nth-child(3),#collection td:nth-child(4),#collection td:nth-child(6){font-size:clamp(8px,2.3vw,12px);white-space:nowrap}
+#collection td:nth-child(3)::before,#collection td:nth-child(4)::before,#collection td:nth-child(6)::before{display:inline}
 #collection td:nth-child(5){grid-column:1/-1}#collection td:nth-child(5)::before{content:'Label : ';font-weight:600}
 #collection td:nth-child(6)::before{content:'Achat : ';font-weight:600}
 #collection a{white-space:normal;overflow-wrap:anywhere}#collection td:nth-child(2)>a{display:inline-block;padding:2px 0}
